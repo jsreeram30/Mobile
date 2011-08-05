@@ -1,0 +1,229 @@
+{ 
+	"success": "true",
+	"lessons": [{
+ 		"title": "Lesson Title",
+		"description" : "This is a great lesson for training",
+		"id": "1234",
+		"pages" : "5",
+		"completedPages": "0",
+		"author": "Max Lucado",
+		"thumbNail" : "http://training.rightnow.org/postid/image.gif",
+		"appxTime" : "10-12min",
+		"status" : "opened",
+		"pages": [
+		{
+			"id": 1234,
+			"title": "Page 1",
+			"pageNum": 1,
+			"entries": [
+			{
+				"id": 		"111234",
+				"title": 		"Read this",
+				"type": 		"text",
+				"content": 	"This is a text entry"
+			},
+			{
+				"id": 		"121234",
+				"title": 		"Watch a video",
+				"type": 		"video",
+				"content": 	"This is a video to watch",
+				"url": 		"http://www.example.com/video.mp4"
+			},
+			{
+				"id": 		"1a21234",
+				"title": 		"Poll",
+				"type": 		"poll",
+				"content": 	"Who is your favorite spy?",
+				"responses": [
+				{
+					"id": "1a11234",
+					"entry_id":"1a21234",
+					"name": "Charles Carmichael",
+					"isSelected": "true"
+				},
+				{
+					"id": "1b21234",
+					"entry_id":"1a21234",
+					"name": "Sarah Walker",
+					"isSelected": "false"
+				},
+				{
+					"id": "1b21234",
+					"entry_id":"1a21234",
+					"name": "Morgan Grimes",
+					"isSelected": "false"
+				}]
+				
+			},
+			
+			{
+				"id": 		"131234",
+				"title": 		"Listen to audio",
+				"type": 		"audio",
+				"content": 	"This is a video to watch",
+				"url": 		"http://www.example.com/audio.mp3"
+			},
+			{
+				"id": 		"141234",
+				"title": 		"Watch a video",
+				"type": 		"response",
+				"content": 	"This is a question to the user",
+				"responses": [ ]
+			},
+			{
+				"id": 		"1a41234",
+				"title": 		"Watch a video",
+				"type": 		"response",
+				"content": 	"This is a question to the user",
+				"responses": [
+					{
+						"id": "1b11234",
+						"entry_id": "1a41234",
+						"content": "I really like how it's shaping up.",
+						"date": "2011-01-01 00:00:00 +0000"
+					}
+			 	]
+			},
+
+			{
+				"id": 		"151234",
+				"title": 		"Community Question",
+				"type": 		"community",
+				"content": 	"Community Question",
+				"responses": [
+				{
+					"id": "111234a",
+					"entry_id": "151234",
+					"name": "Charles Carmichael",
+					"isSelf": "true",
+					"picture": "http://example.com/photo.jpg",
+					"content": "This is Chuck's response to the question",
+					"date": "2011-01-01 00:00:00 +0000"
+				},
+				{
+					"id": "121234a",
+					"entry_id": "151234",
+					"name": "Sarah Walker",
+					"isSelf": "false",
+					"picture": "http://example.com/photo.jpg",
+					"content": "This is Sarah's response to the question",
+					"date": "2011-01-01 00:00:00 +0000"
+				}
+				]
+			}
+			]
+		},
+		{
+			"id": 21234,
+			"title": "Page 2",
+			"pageNum": 2,
+			"entries": [
+			{
+				"id": 		"211234",
+				"title": 		"Read this",
+				"type": 		"text",
+				"content": 	"This is a text entry"
+			},
+			{
+				"id": 		"221234",
+				"title": 		"Watch a video",
+				"type": 		"video",
+				"content": 	"This is a video to watch",
+				"url": 		"http://www.example.com/video.mp4"
+			},
+			{
+				"id": 		"231234",
+				"title": 		"Listen to audio",
+				"type": 		"audio",
+				"content": 	"This is a video to watch",
+				"url": 		"http://www.example.com/audio.mp3"
+			},
+			{
+				"id": 		"241234",
+				"title": 		"Watch a video",
+				"type": 		"response",
+				"content": 	"This is a question to the user",
+				"responses": [
+			 	]
+				
+			},
+	
+			{
+				"id": 		"251234",
+				"title": 		"Community Question",
+				"type": 		"community",
+				"content": 	"This is a question",
+				"responses": [
+				{
+					"id": "211234",
+					"entry_id": "251234",
+					"name": "Charles Carmichael",
+					"isSelf": "true",
+					"picture": "http://example.com/photo.jpg",
+					"content": "This is Chuck's response to the question",
+					"date": "2011-01-01 00:00:00 +0000"
+				},
+				{
+					"id": "221234",
+					"entry_id": "251234",
+					"name": "Sarah Walker",
+					"isSelf": "false",
+					"picture": "http://example.com/photo.jpg",
+					"content": "This is Sarah's response to the question",
+					"date": "2011-01-01 00:00:00 +0000"
+				}
+				]
+			}
+			]
+		},
+		{
+			"id": 100001234,
+			"title": "Page 3",
+			"pageNum": 3,
+			"entries": []
+		},
+		{
+			"id": 110001234,
+			"title": "Page 4",
+			"pageNum": 4,
+			"entries": []
+		}			
+		]
+	},
+	{
+		"title": "Lesson 2 Title",
+		"description" : "This is a great lesson for training",
+		"id": "101234",
+		"completedPages": "0",
+		"author": "Max Lucado",
+		"thumbNail" : "http://training.rightnow.org/postid/image.gif",
+		"appxTime" : "10-12min",
+		"status" : "opened",
+		"pages": [ ]
+	},
+	{
+		"title": "Lesson 3 Title",
+		"description" : "This is a great lesson for training",
+		"id": "111234",
+		"completedPages": "0",
+		"author": "Max Lucado",
+		"thumbNail" : "http://training.rightnow.org/postid/image.gif",
+		"appxTime" : "10-12min",
+		"status" : "opened",
+		"pages": [ ]
+	},
+	{
+		"title": "Lesson 4 Title",
+		"description" : "This is a great lesson for training",
+		"id": "121234",
+		"completedPages": "0",
+		"author": "Max Lucado",
+		"thumbNail" : "http://training.rightnow.org/postid/image.gif",
+		"appxTime" : "10-12min",
+		"status" : "opened",
+		"pages": [ ]
+	}
+	
+	
+	]
+}

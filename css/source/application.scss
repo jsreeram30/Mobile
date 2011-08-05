@@ -1,0 +1,408 @@
+
+$base-color: #2a999c;
+$active-color: #2a999c;
+
+$blue-color: #3F71C0;
+$button-color: #51CECA;
+$orange-color: #ed6e2a;
+$button-gradient: #cc0000;
+$warning-color: #CB0E0C;
+
+$base-gradient: 'matte';
+$body-bg-color: #ffffff;
+
+$default-border-radius: 4px;
+$textarea-border-radius: 10px;
+
+@import 'sencha-touch/default/all';
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-toolbar-forms;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-carousel;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-list-paging;
+@include sencha-list-pullrefresh;
+@include sencha-layout;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
+
+body {
+	background-color: #1C1C1C;
+}
+.x-panel, .x-list {
+	background: $body-bg-color;
+}
+
+
+@include sencha-button-ui('orange', $orange-color, 'matte');
+@include sencha-button-ui('warning', $warning-color, 'matte');
+
+.x-button-orange {
+	.x-button-label {
+		color: #fff;
+	}
+}
+
+.x-panel {
+	
+	.x-toolbar {
+		@include background( url('../images/navbar.bkg.png') repeat-x);
+		border: none;
+	}
+}
+.x-sheet {
+	color: #fff;
+}
+.x-msgbox-content {
+	clear: both;
+	margin-top: 20px;
+}
+
+.x-button {
+	@include linear-gradient(color-stops($button-color,  darken($button-color,30%) ) );
+  	color: #fff;
+}
+
+
+
+.postNotStarted {
+
+}
+.postStarted {
+	color: #aaaa;
+}
+
+.darkbody  {
+		color: #fff;
+/*	  	@include background( radial-gradient(color-stops(#454545, #1c1c1c 160px), 160px 0 ) );*/
+
+	@include background(#000 url('../images/1024x1024-ipad.bkg.png'));
+	@include background-size(cover);
+	div {
+		background: none;
+	}
+
+}
+
+.x-field textarea {
+	border: 1px solid #d2d2d2;
+	background: #fff;
+	@include border-radius($textarea-border-radius);
+}
+.questionElementHeader{
+	padding: 0;
+
+	h2 {
+		position: relative;
+		top: 2px;
+/*		display: inline-block;*/
+	}
+	
+	.entryThumb {
+/*		display: inline-block;*/
+		height: 25px;
+		width: 25px;
+		overflow: hidden;
+		margin-right: 8px;
+		float: left;
+		img {
+			float: left;
+			height: 100%;
+		}
+	}
+}
+.questionElementHeader, .answerElementHeader {
+	color: #333;
+	width: 100%;
+	background: #dcdcdc;
+	@include border-radius($default-border-radius);
+	margin-bottom: 10px;
+	padding: 8px;
+	min-height: 45px;
+}
+
+.entryQuestion {
+	margin: 15px 0;
+}
+
+.lesson-header {
+	color: #fff;
+}
+.lessonProgress, .lessonTitle, .lessonDescription {
+		background: none;
+}
+ul.pageProgress { 
+	li {
+		@include inline-block;
+		font-weight: bold;
+		padding-top: 2px;
+		padding-left: 12px;
+		font-size: 0.7em;
+		height: 20px;
+		width: 26px;
+	}
+	
+	li:first-child {
+		@include background(url('../images/progress.d1.png') no-repeat);
+		@include background-size(100%); /* TODO: Retina : Remove? */
+		width: 20px;
+		padding-left: 6px;
+	}
+	.current { 
+		background: red;
+		@include background(url('../images/progress.d2.png') no-repeat);
+		@include background-size(100%); /* TODO: Retina : Remove? */
+	}
+	
+	.incomplete {
+		background: lightgrey;
+		@include background(url('../images/progress.l1.png') no-repeat);
+		@include background-size(100%); /* TODO: Retina : Remove? */
+	}
+	
+	.complete {
+		background: #cccccc;
+		@include background(url('../images/progress.d2.png') no-repeat);
+		@include background-size(100%); /* TODO: Retina : Remove? */
+	}
+	
+	li:last-child {
+		width: 33px;
+		padding-left: 14px;
+		
+	}
+	
+	li:last-child.incomplete {
+		background: blue;
+		@include background(url('../images/progress.l2.png') no-repeat);
+		@include background-size(100%); /* TODO: Retina : Remove? */
+	}
+
+	
+	.current + .incomplete { 
+		background: cyan;
+		@include background(url('../images/progress.dl1.png') no-repeat);
+		@include background-size(100%); /* TODO: Retina : Remove? */
+		
+	}
+
+	li:last-child.current {
+		@include background(url('../images/progress.d2d2.png') no-repeat);
+		@include background-size(100%); /* TODO: Retina : Remove? */
+		
+	}
+
+	.current + li:last-child.incomplete {
+		background: blue;
+		@include background(url('../images/progress.d1l2.png') no-repeat);
+		@include background-size(100%); /* TODO: Retina : Remove? */
+	}
+
+}
+	
+#homeLoginPanel, .homeLoggedIn {
+
+	.homeLogo {
+		height: 350px;
+		
+		img {
+			width: 90%;
+			max-width: 514px;
+		}
+	}
+	
+	.homeLogoPhone {
+		height: auto;
+		min-height: 74px;
+		width: 100%;
+		
+	}
+
+	text-align: center;
+
+	.loginForm {
+		width: 300px;
+		background: none;
+		margin: 0 auto;
+
+		&>div {
+			background: none;
+		}
+		* {
+			width: 100%;
+		}
+
+		.x-field {
+			border-bottom: none;
+		}
+
+		input {
+			@include border-radius($textarea-border-radius / 2);
+			border: 0 ;
+		}
+		.loginButton {
+			height: 42px;
+			width: inherit;
+			margin-top: 10px;
+		}
+	}
+
+	.loginFormPhone {
+		width: 100%;
+	}
+	
+	
+
+	.loginExtraOptions {
+		width: 100%;
+		margin-top: 30px;
+		text-align: center;
+
+		img {
+			width: 110px;
+		}
+		.createLogin {
+/*			margin-left: 25px;
+			float: left;
+*/		}
+		.forgotLogin {
+			margin-left: 40px;
+/*			margin-right: 25px;
+			float: right;
+*/		}
+	}
+
+}
+
+.nextSubmit {
+	margin-top: 3.5em;
+	margin-left: 10px;
+}
+.navLogo {
+	border: 0;
+	margin: 1em 0;
+	text-align: center;
+	img {
+		height: auto;
+		min-height: 74px;
+		width: 80%;
+	}
+}
+
+.homeMenu {
+	
+	
+	.inboxIcons {
+		float: left;
+		width: 26px;
+		margin-right: 6px;
+	}
+
+	.inboxText {
+		float: left;
+		margin-top: 3px;
+	}
+}
+.listNavPhone {
+	.x-list-item {
+		width: 90%;
+		margin: 0 auto;
+		background: #fff;
+	}
+	.x-list-item:first-child {
+		border-top-left-radius: $default-border-radius;
+		border-top-right-radius: $default-border-radius;
+	}
+	.x-list-item:last-child {
+		border-bottom-left-radius: $default-border-radius;
+		border-bottom-right-radius: $default-border-radius;
+	}
+}
+
+.profilePage {
+	@include background(#000 url('../images/1024x1024-ipad.bkg.png'));
+	@include background-size(cover);
+	
+	padding: 10px;
+	color: #ffffff;
+	font-size: 15px;
+
+	div {
+		background: none;
+	}
+
+	h2 {
+		font-size: 1.7em;
+	}
+	.churchLabel, .groupLabel {
+		margin-top: .8em;
+		color: #bcbcbc;
+		font-size: .8em;
+		font-weight: bold;
+		font-variant: small-caps;
+	}
+	.churchName {
+		color: $orange-color;
+		font-weight: bold;
+	}
+	.groupLabel {
+		
+	}
+	
+	.groupName {
+		font-weight: bold;
+	}
+	.credentials {
+
+		padding-top: 20px;
+		
+		input {
+			color: $blue-color;
+		}
+		.savePasswordToggle, .savePasswordTogglePhone {
+			span{
+				display: inline-block;
+				line-height: 10px;
+				font-size: 14px;
+			}
+		}
+		
+		.x-field-toggle .x-slider {
+		   	&.x-toggle-on {
+		      @include background-gradient($blue-color, 'recessed');
+		    }
+		}
+
+		.x-field {
+			background: white;
+		}
+
+		.x-form-label {
+			span {
+				margin-top: 10px;
+			}
+		}
+	}
+	.profileForm {
+		width: 360px;
+		font-size: 14px;
+		margin: 0 auto;
+	}
+
+	.profileFormPhone {
+		width: 100%;
+	}
+
+/*	text-align: center;*/
+	
+	.logoutButton {
+		margin: 20px auto;
+		height: 42px;
+	}
+}
